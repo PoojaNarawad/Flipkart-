@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MI 11X (128GB storage)</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        header {
+            /* background-color: rgb(0, 119, 255);
+            height: 56px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center; */
+        }
+
+        .brand-explore-plus {
+            margin-left: 170px;
+            font-style: italic;
+        }
+
+        .brand {
+            color: white;
+            font-size: 25px;
+        }
+
+        .explore-plus {
+            font-size: 14px;
+        }
+
+        .explore {
+            color: white;
+        }
+
+        .plus {
+            color: yellow;
+        }
+
+        .search-bar {
+            margin-left: 30px;
+            padding: 10px;
+            box-sizing: border-box;
+            height: 40px;
+            background-color: white;
+            width: 600px;
+            /* border: 2px solid red; */
+        }
+
+        .search-icon {
+            /* border: 1px solid red; */
+            color: gray;
+            font-size: 20px;
+            line-height: 1.4px;
+            padding-top: 10px;
+            align-self: flex-end;
+        }
+
+        .search {
+            display: inline-block;
+            width: 90%;
+            color: grey;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content-center {
+            align-items: center;
+        }
+
+        .h-56px {
+            height: 56px;
+        }
+
+        .bg-blue {
+            background-color: rgb(0, 119, 255);
+        }
+
+        .login {
+            background-color: white;
+            color: rgb(0, 119, 255);
+            padding: 10px;
+            width: 110px;
+            margin-left: 170px;
+            text-align: center;
+        }
+
+        .font-sans-serif {
+            font-family: sans-serif;
+        }
+
+        .more {
+            color: white;
+            width: 130px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .cart {
+            color: white;
+            width: 120px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+            align-items: center;
+
+        }
+
+        menu {
+            border: 1px solid grey;
+            display: flex;
+            flex-direction: row;
+            padding: 10px 140px;
+            margin-top: 0px;
+            justify-content: space-around;
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        span.bi-chevron-down {
+            margin-left: 4px;
+            font-size: 10px;
+        }
+
+        figure {
+            width: 64px;
+        }
+
+        .img-wrapper {
+            width: 64px;
+            height: 64px;
+            text-align: center;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .img-wrapper img {
+            height: 100%;
+            display: inline-block;
+        }
+
+        .btn1 {
+            background-color: white;
+            padding: 10px;
+            font-size: 20px;
+            color: grey;
+            height: 56px;
+            width: 220px;
+            display: inline-block;
+        }
+
+        .btn2 {
+            background-color: rgb(151, 148, 148);
+            padding: 10px;
+            font-size: 20px;
+            margin: 10px;
+            color: white;
+            height: 56px;
+            width: 220px;
+            display: inline-block;
+        }
+
+        div .image {
+            background-color: rgba(235, 229, 229, 0.781);
+            float: center;
+            margin-top: 10px;
+        }
+
+        .preview-wrapper {
+            width: 450px;
+            height: 450px;
+            background-color: rgba(235, 229, 229, 0.781);
+            text-align: center;
+
+        }
+
+        nav-link {
+            font-size: 13px;
+            color: grey;
+        }
+
+        nav-link span.bi-chevron-right {
+            margin-left: 4px;
+            font-size: 10px;
+        }
+
+        .heading {
+            margin-top: 12px;
+            font-size: 20px;
+        }
+
+        .star-rating-review {
+            box-sizing: border-box;
+        }
+
+        .star {
+            background-color: rgb(49, 136, 49);
+            padding: 5px;
+            border-radius: 3px;
+            color: white;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .Ratings-reviews {
+            font-size: 13px;
+            color: grey;
+        }
+
+        .f-assured img {
+            height: 30px;
+            width: 77px;
+            padding-top: 10px;
+        }
+
+        .offer {
+            color: green;
+            font-size: 15px;
+            margin-left: -10px;
+            padding: 12px;
+        }
+
+        span.bi-info-circle {
+            padding: 10px;
+            font-size: 14px;
+            color: grey;
+        }
+
+        .price {
+            font-size: 30px;
+            padding-left: 10px;
+        }
+
+        .real-price {
+            text-decoration: line-through;
+            color: grey;
+            padding-left: 10px;
+        }
+
+        .discount {
+            color: green;
+            padding-left: 10px;
+        }
+
+        .Availableoffers {
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        span.bi-tag-fill {
+            color: green;
+        }
+
+        div span.bank-offer {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        div span.offer-options {
+            font-size: 14px;
+        }
+
+        div span.terms {
+            font-size: 14px;
+            color: rgb(0, 119, 255);
+            font-weight: 550px;
+        }
+
+        .view-more {
+            font-weight: 550px;
+            font-size: 14px;
+            color: rgb(0, 119, 255);
+        }
+
+        div.offerdiscription>div {
+            margin-bottom: 8px;
+        }
+
+        .warranty {
+            font-size: 14px;
+        }
+
+         .milogo {
+            height: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flex-row content-center h-56px bg-blue font-sans-serif">
+        <div class="brand-explore-plus">
+            <span class="brand">Flipkart</span>
+            <div class="explore-plus">
+                <span class="explore">Explore</span>
+                <span class="plus">Plus</span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <span class="search">search for products,brands and more</span>
+            <span class="bi bi-search search-icon" style="color:rgba(40,116,240,255)"></span>
+        </div>
+        <div class="login">Login</div>
+        <div class="more">More<span class="bi bi-chevron-down"></span></div>
+        <div class="cart"><span class="bi bi-cart-fill"></span>&nbsp;&nbsp;Cart</div>
+    </header>
+    <nav>
+        <menu>
+            <div>Electronics<span class="bi bi-chevron-down"></span></div>
+            <div>TVs&Appliances<span class="bi bi-chevron-down"></span></div>
+            <div>Men<span class="bi bi-chevron-down"></span></div>
+            <div>Women<span class="bi bi-chevron-down"></span></div>
+            <div>Baby&Kids<span class="bi bi-chevron-down"></span></div>
+            <div>Home&Furniture<span class="bi bi-chevron-down"></span></div>
+            <div>Sports,Books&More<span class="bi bi-chevron-down"></span></div>
+            <div>Flights</div>
+            <div>Offer Zone</div>
+            <div>Grocery</div>
+        </menu>
+    </nav>
+    <section>
+        <main class="flex-row">
+            <figure>
+                <div>
+                    <div class="img-wrapper"><img src="./images/MIPHONE.png" /></div>
+                    <div class="img-wrapper"><img src="./images/MIimg4.jpeg" /></div>
+                    <div class="img-wrapper"><img src="./images/Miimg-2.jpeg" /></div>
+                    <div class="img-wrapper"><img src="./images/MIimg-5.jpeg" /></div>
+                    <div class="img-wrapper"><img src="./images/MIimg-5.jpeg" /></div>
+                    <div class="img-wrapper"><img src="./images/MIimg-5.jpeg" /></div>
+                </div>
+            </figure>
+            <div class="preview-and-buttons">
+                <div class="preview-wrapper">
+                    <div><img class="image" src="./images/MIPHONE.png"></div>
+
+                </div>
+                <div class="buttons"> <button class="btn1"> &nbsp;&nbsp;&nbsp;&nbsp;<span
+                            class="bi bi-cart-fill"></span>
+                        &nbsp;&nbsp;Add To Cart&nbsp;&nbsp;</button>
+                    <button class="btn2">&nbsp;&nbsp;&nbsp;<span class="bi bi-lightning"></span>&nbsp;&nbsp;Buy
+                        Now&nbsp;&nbsp;</button>
+                </div>
+            </div>
+
+            <article>
+                <nav-link>
+                    <span>&nbsp;&nbsp;Home&nbsp;<span class="bi bi-chevron-right"></span>
+                        <span>&nbsp;Mobiles&Acc...&nbsp;<span class="bi bi-chevron-right"></span></span>
+                        <span>&nbsp;Mobiles&nbsp;<span class="bi bi-chevron-right"></span></span>
+                        <span>&nbsp;Mi Mobiles&nbsp;<span class="bi bi-chevron-right"></span></span>
+                        <span>&nbsp;Mi (11x Luna...&nbsp;<span class="bi bi-chevron-right"></span></span>
+                </nav-link>
+                <div class="heading">Mi 11X (Lunar White,128GB) (6 GB RAM)</div>
+                <div class="star_rating-review">
+                    <span class="star">4.1 <span class="bi bi-star"></span></span>
+                    <span class="Ratings-reviews">1,973 Ratings & 209 Reviews</span>
+                    <span class="f-assured"><img src="./images/flipkartassured.png"></span>
+                </div>
+                <div class="offer">Extra ₹ 3211 off </div>
+                <div class="offer-price"><b class="price">&#8377;25,789</b> <span class="real-price">&#8377;29,000</span> <span
+                        class="discount">11% off</span><span class="bi bi-info-circle"></span></div>
+                <div class="Availableoffers"> Available Offers</div>
+                <div class="offerdiscription">
+                    <div>
+                        <span class="bi bi-tag-fill"></span>
+                        <span class="bank-offer">&nbsp;&nbsp;Bank Offer</span>
+                        <span class="offer-options">10% off on ICICI Bank Credit Cards, up to &#8377;750. On orders of &#8377;5000
+                            and above</span>
+                        <span class="terms">T&C</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-tag-fill"></span>
+                        <span class="bank-offer">&nbsp;&nbsp;Bank Offer</span>
+                        <span class="offer-options">10% off on ICICI Bank Debit Cards, up to &#8377;250. On orders of &#8377;2500
+                            and above</span>
+                        <span class="terms">T&C</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-tag-fill"></span>
+                        <span class="bank-offer">&nbsp;&nbsp;Bank Offer</span>
+                        <span class="offer-options">20% Instant discount of up to &#8377;200 on First time Dhani One Freedom
+                            Card Txn, TnC Applicable</span>
+                        <span class="terms">T&C</span>
+                    </div>
+
+                    <div>
+                        <span class="bi bi-tag-fill"></span>
+                        <span class="bank-offer">&nbsp;&nbsp;Special Price</span>
+                        <span class="offer-options">Get extra &#8377;3211 off (price inclusive of discount)</span>
+                        <span class="terms">T&C</span>
+                    </div>
+                    <div class="view-more">View 6 more offers</div>
+                </div>
+                <div class="flex-row content-center">
+                    <span><img class="milogo" src="./images/milogo.png"></span>
+                    <span class="warranty">1 Year Manufacturer Warranty for Device and 6 Months Manufacturer Warranty
+                        for In-box Accessories</span>
+                    <span class="view-more">&nbsp;&nbsp;Know More</span>
+                </div>
+            </article>
+        </main>
+    </section>
+</body>
+
+</html>
